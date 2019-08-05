@@ -1,14 +1,9 @@
-
-export default function (kibana) {
+module.exports = function (kibana) {
   return new kibana.Plugin({
-   uiExports: {
-     app: {
-        title: 'MA Branding',
-        order: -100,
-        description: 'MA Branding',
-        main: 'plugins/ma-branding/index.js',
-        hidden: false
-     }
-    }
+    uiExports: {
+      hacks: [
+        'plugins/ma-branding/index.js'
+      ]
+    },
   });
 };
